@@ -1,5 +1,5 @@
 # discourse-profile-photo-wall
 
-**Theme Summary**
+**Add a photo wall in user profile**
 
 For more information, please see: **url to meta topic**
