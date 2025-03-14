@@ -2,4 +2,8 @@ en:
   theme_metadata:
     description: Add a photo wall in user profile
     settings:
-      example_setting: A description of a setting.
+      photowall_tag_name: Tags required for topic to display on the photo wall.
+  photowall:
+    name: Photo wall
+    nothing: It's empty here...
+    composer_placeholder: "<!-- Insert an image here. Only the first picture will be displayed in the photo wall. -->"

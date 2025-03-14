@@ -1,0 +1,9 @@
+zh_CN:
+  theme_metadata:
+    description: 在个人资料上添加照片墙
+    settings:
+      photowall_tag_name: 显示在照片墙的帖子需要的标签。
+  photowall:
+    name: 照片墙
+    nothing: 这里空空如也……
+    composer_placeholder: "<!-- 在这里插入一张图片。照片墙中只会显示第一张。 -->"

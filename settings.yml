@@ -1,2 +1,3 @@
-example_setting:
-  default: true
+photowall_tag_name:
+  default: 照片墙|photo
+  type: list
