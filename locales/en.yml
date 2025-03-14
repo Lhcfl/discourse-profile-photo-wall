@@ -1,0 +1,5 @@
+en:
+  theme_metadata:
+    description: Add a photo wall in user profile
+    settings:
+      example_setting: A description of a setting.
