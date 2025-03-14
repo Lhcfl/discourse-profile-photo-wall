@@ -24,7 +24,7 @@ export default class ProfilePhotoWall extends Component {
   }
 
   get photoTags() {
-    return settings.photowall_tag_name.split("|");
+    return settings.photowall_tag_name.split("|").filter((x) => x);
   }
 
   get user() {
@@ -44,9 +44,12 @@ export default class ProfilePhotoWall extends Component {
       this.loading = true;
       const res = await this.store.findFiltered("topicList", {
         filter: `topics/created-by/${this.user.username_lower}`,
-        params: {
-          tags: this.photoTags,
-        },
+        params:
+          this.photoTags.length > 0
+            ? {
+                tags: this.photoTags,
+              }
+            : { match_all_tags: true },
       });
       const photoTopics = (res?.topic_list?.topics ?? [])
         .filter((topic) => topic.image_url)
@@ -80,7 +83,10 @@ export default class ProfilePhotoWall extends Component {
       );
 
       this.photoList = photoList;
-      this.renderLightBoxAndColumns();
+
+      if (photoList.length > 0) {
+        this.renderLightBoxAndColumns();
+      }
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err);
