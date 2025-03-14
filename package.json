@@ -13,5 +13,8 @@
     "yarn": "please-use-pnpm",
     "pnpm": "9.x"
   },
+  "scripts": {
+    "format": "prettier -w javascripts"
+  },
   "packageManager": "pnpm@9.15.5"
 }
