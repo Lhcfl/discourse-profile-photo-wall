@@ -1,6 +1,6 @@
 en:
   theme_metadata:
-    description: Add a photo wall in user profile
+    description: Add a photo wall to your user profile
     settings:
       photowall_tag_name: Tags required for topic to display on the photo wall.
   photowall:
