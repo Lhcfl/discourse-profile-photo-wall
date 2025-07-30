@@ -32,11 +32,11 @@ export default class ProfilePhotoWall extends Component {
   }
 
   get user() {
-    return this.args.outletArgs.user;
+    return this.args.user;
   }
 
   get isThisUser() {
-    return this.currentUser?.id === this.args.outletArgs.user.id;
+    return this.currentUser?.id === this.args.user.id;
   }
 
   get shouldSeePhotoWall() {
