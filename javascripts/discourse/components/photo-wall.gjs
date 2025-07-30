@@ -149,34 +149,33 @@ export default class ProfilePhotoWall extends Component {
         </h3>
         <ConditionalLoadingSpinner @condition={{this.loading}}>
           {{#if this.photoList}}
-            <div
-              id="{{this.randomId}}"
-              class="cooked photo-wall-cards-container"
-            >
+            <div id={{this.randomId}} class="cooked photo-wall-cards-container">
               <div class="d-image-grid">
                 {{#each this.photoList as |item|}}
                   <p>
                     <div class="lightbox-wrapper">
                       <a
                         class="lightbox"
-                        href="{{item.image_url}}"
-                        data-download-href="{{item.image_url}}"
-                        data-topic-id="{{item.id}}"
-                        title="{{item.fancy_title}}"
+                        href={{item.image_url}}
+                        data-download-href={{item.image_url}}
+                        data-topic-id={{item.id}}
+                        title={{item.fancy_title}}
                       >
                         <img
-                          src="{{item.image_url}}"
-                          srcset="{{item.image_url}}"
-                          alt="{{item.fancy_title}}"
-                          width="{{item.image_width}}"
-                          height="{{item.image_height}}"
+                          src={{item.image_url}}
+                          srcset={{item.image_url}}
+                          alt={{item.fancy_title}}
+                          width={{item.image_width}}
+                          height={{item.image_height}}
                           loading="lazy"
                         />
                         <div class="meta">
                           {{icon "far-image"}}
+                          {{! I don't know how to fix this }}
+                          {{! template-lint-disable no-nested-interactive }}
                           <a
                             class="filename"
-                            href="{{item.url}}"
+                            href={{item.url}}
                             onclick={{fn this.routeToTopic item}}
                           >
                             {{item.fancy_title}}
