@@ -55,7 +55,9 @@ export default class ProfilePhotoWall extends Component {
               }
             : { match_all_tags: true },
       });
-      const photoTopics = (res?.topic_list?.topics ?? [])
+
+      // seems like in new version of Discourse, response structure has changed
+      const photoTopics = (res?.topics ?? res?.topic_list?.topics ?? [])
         .filter((topic) => topic.image_url)
         .map((x) => [
           x.id,
